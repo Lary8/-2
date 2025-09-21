@@ -1,4 +1,3 @@
-    from datetime import datetime, date
     # Функция для определения дня недели
     def get_weekday(day, month, year):
     week_days = ['Monday', 'Tuesday', 'Wednesday',
@@ -6,11 +5,14 @@
     birth_date = datetime(year, month, day)
     return week_days[birth_date.weekday()]
     # Функция для определения високосного года
-    def is_leap_year(year):
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400
-    == 0):
-    return True
-    return False
+        elif year % 100 == 0:
+    if year % 400 == 0:
+        print('Год високосный.')
+    else:
+        print('Год не високосный.')
+    else:
+        print('Год високосный.')
+        from datetime import datetime, date
     # Функция для определения возраста пользователя
     def get_age(day, month, year):
     today = date.today()
